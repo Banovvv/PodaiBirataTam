@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7B0700A3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{00C12098-2574-4BE3-93A9-CD6AFFCDCEA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PodaiBirataTam.Data.Models", "PodaiBirataTam.Data.Models\PodaiBirataTam.Data.Models.csproj", "{7B737734-E7E3-4634-952F-4511A28DDBD2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PodaiBirataTam.Data.Models", "Data\PodaiBirataTam.Data.Models\PodaiBirataTam.Data.Models.csproj", "{7B737734-E7E3-4634-952F-4511A28DDBD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PodaiBirataTam.Data", "PodaiBirataTam.Data\PodaiBirataTam.Data.csproj", "{E707C9F3-60E6-4B79-94F7-92AA12750E47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PodaiBirataTam.Data", "Data\PodaiBirataTam.Data\PodaiBirataTam.Data.csproj", "{E707C9F3-60E6-4B79-94F7-92AA12750E47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
