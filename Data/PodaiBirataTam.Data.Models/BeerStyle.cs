@@ -1,16 +1,16 @@
 ﻿namespace PodaiBirataTam.Data.Models
 {
-    public class BeerType
+    public class BeerStyle
     {
-        public BeerType()
+        public BeerStyle()
         {
-            BeerStyles = new HashSet<BeerStyle>():
         }
 
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public virtual ICollection<BeerStyle> BeerStyles { get; set; }
+        public int? TypeId { get; set; }
+        public virtual BeerType Type { get; set; }
     }
 }
