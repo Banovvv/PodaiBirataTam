@@ -4,6 +4,7 @@
     {
         public BeerStyle()
         {
+            Beers = new HashSet<Beer>();
         }
 
         public int Id { get; set; }
@@ -12,5 +13,7 @@
 
         public int? TypeId { get; set; }
         public virtual BeerType Type { get; set; }
+
+        public virtual ICollection<Beer> Beers { get; set; }
     }
 }
