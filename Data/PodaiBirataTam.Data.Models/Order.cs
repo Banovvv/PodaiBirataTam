@@ -2,6 +2,11 @@
 {
     public class Order
     {
+        public Order()
+        {
+            Invoices = new HashSet<Invoice>();
+        }
+
         public int Id { get; set; }
         public DateTime CreatedOn { get; set; }
         public string? Details { get; set; }
@@ -11,5 +16,7 @@
 
         public int StatusId { get; set; }
         public virtual OrderStatus Status { get; set; }
+
+        public virtual ICollection<Invoice> Invoices { get; }
     }
 }
