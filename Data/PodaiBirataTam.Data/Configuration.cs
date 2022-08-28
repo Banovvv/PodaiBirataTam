@@ -1,4 +1,4 @@
-﻿namespace PodaiBirataTam.Data.Configurations
+﻿namespace PodaiBirataTam.Data
 {
     internal static class Configuration
     {
