@@ -27,6 +27,8 @@ namespace PodaiBirataTam.Data
             new AddressEntityTypeConfiguration().Configure(modelBuilder.Entity<Address>());
             new CountryEntityTypeConfiguration().Configure(modelBuilder.Entity<Country>());
             new TownEntityTypeConfiguration().Configure(modelBuilder.Entity<Town>());
+            new InvoiceEntityTypeConfiguration().Configure(modelBuilder.Entity<Invoice>());
+            new InvoiceStatusEntityTypeConfiguration().Configure(modelBuilder.Entity<InvoiceStatus>());
         }
     }
 }
