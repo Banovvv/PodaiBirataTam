@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PodaiBirataTam.Data.Configurations;
+using PodaiBirataTam.Data.Models;
 
 namespace PodaiBirataTam.Data
 {
@@ -23,7 +24,9 @@ namespace PodaiBirataTam.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            new AddressEntityTypeConfiguration().Configure(modelBuilder.Entity<Address>());
+            new CountryEntityTypeConfiguration().Configure(modelBuilder.Entity<Country>());
+            new TownEntityTypeConfiguration().Configure(modelBuilder.Entity<Town>());
         }
     }
 }
