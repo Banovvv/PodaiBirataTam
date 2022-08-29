@@ -14,6 +14,40 @@ namespace PodaiBirataTam.Data
         {
         }
 
+        // Address-related DbSets
+        public virtual DbSet<Address> Addresses { get; set; }
+        public virtual DbSet<Town> Towns { get; set; }
+        public virtual DbSet<Country> Countries { get; set; }
+
+        // Beer-related DbSets
+        public virtual DbSet<Beer> Beers { get; set; }
+        public virtual DbSet<Brewery> Breweries { get; set; }
+        public virtual DbSet<BeerStyle> BeerStyles { get; set; }
+        public virtual DbSet<BeerType> BeerTypes { get; set; }
+        public virtual DbSet<SRM> SRMs { get; set; }
+
+        // Customer-related DbSets
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
+
+        // Invoice-related DbSets
+        public virtual DbSet<Invoice> Invoices { get; set; }
+        public virtual DbSet<InvoiceStatus> InvoiceStatuses { get; set; }
+
+        // Order-related DbSets
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<OrderStatus> OrderStatuses { get; set; }
+        public virtual DbSet<OrderItem> OrderItems { get; set; }
+        public virtual DbSet<OrderItemStatus> OrderItemStatuses { get; set; }
+
+        // Payment-related DbSets
+        public virtual DbSet<Payment> Payments { get; set; }
+        public virtual DbSet<PaymentStatus> PaymentStatuses { get; set; }
+
+        // Shipment-related DbSets
+        public virtual DbSet<Shipment> Shipments { get; set; }
+        public virtual DbSet<ShipmentStatus> ShipmentStatuses { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -47,7 +81,7 @@ namespace PodaiBirataTam.Data
             // Order-related configurations
             new OrderEntityTypeConfiguration().Configure(modelBuilder.Entity<Order>());
             new OrderStatusEntityTypeConfiguration().Configure(modelBuilder.Entity<OrderStatus>());
-            new ItemStatusEntityTypeConfiguration().Configure(modelBuilder.Entity<ItemStatus>());
+            new OrderItemStatusEntityTypeConfiguration().Configure(modelBuilder.Entity<OrderItemStatus>());
 
             // Payment-related configurations
             new PaymentEntityTypeConfiguration().Configure(modelBuilder.Entity<Payment>());

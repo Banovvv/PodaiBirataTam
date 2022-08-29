@@ -1,8 +1,8 @@
 ﻿namespace PodaiBirataTam.Data.Models
 {
-    public class ItemStatus
+    public class OrderItemStatus
     {
-        public ItemStatus()
+        public OrderItemStatus()
         {
             Items = new HashSet<OrderItem>();
         }

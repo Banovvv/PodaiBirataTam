@@ -17,6 +17,6 @@
         public virtual Beer Beer { get; set; }
 
         public int StatusId { get; set; }
-        public virtual ItemStatus Status { get; set; }
+        public virtual OrderItemStatus Status { get; set; }
     }
 }

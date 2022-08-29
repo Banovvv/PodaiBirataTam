@@ -4,9 +4,9 @@ using PodaiBirataTam.Data.Models;
 
 namespace PodaiBirataTam.Data.Configurations
 {
-    internal class ItemStatusEntityTypeConfiguration : IEntityTypeConfiguration<ItemStatus>
+    internal class OrderItemStatusEntityTypeConfiguration : IEntityTypeConfiguration<OrderItemStatus>
     {
-        public void Configure(EntityTypeBuilder<ItemStatus> itemStatus)
+        public void Configure(EntityTypeBuilder<OrderItemStatus> itemStatus)
         {
             itemStatus.Property(x => x.Status)
                 .IsRequired(true)
