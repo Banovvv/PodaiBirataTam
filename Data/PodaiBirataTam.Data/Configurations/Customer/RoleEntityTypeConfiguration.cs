@@ -4,14 +4,14 @@ using PodaiBirataTam.Data.Models;
 
 namespace PodaiBirataTam.Data.Configurations
 {
-    internal class OrderStatusEntityTypeConfiguration : IEntityTypeConfiguration<OrderStatus>
+    internal class RoleEntityTypeConfiguration : IEntityTypeConfiguration<Role>
     {
-        public void Configure(EntityTypeBuilder<OrderStatus> orderStatus)
+        public void Configure(EntityTypeBuilder<Role> role)
         {
-            orderStatus.Property(x => x.Status)
+            role.Property(x => x.Name)
                 .IsRequired(true)
                 .HasMaxLength(25)
-                .IsUnicode(true);
+                .IsUnicode(false);
         }
     }
 }

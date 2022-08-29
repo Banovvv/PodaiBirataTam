@@ -36,6 +36,8 @@ namespace PodaiBirataTam.Data
             new PaymentStatusEntityTypeConfiguration().Configure(modelBuilder.Entity<PaymentStatus>());
             new ShipmentEntityTypeConfiguration().Configure(modelBuilder.Entity<Shipment>());
             new ShipmentStatusEntityTypeConfiguration().Configure(modelBuilder.Entity<ShipmentStatus>());
+            new CustomerEntityTypeConfiguration().Configure(modelBuilder.Entity<Customer>());
+            new RoleEntityTypeConfiguration().Configure(modelBuilder.Entity<Role>());
         }
     }
 }

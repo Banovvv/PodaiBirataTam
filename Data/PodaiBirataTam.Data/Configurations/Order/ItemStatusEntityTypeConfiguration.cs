@@ -10,6 +10,7 @@ namespace PodaiBirataTam.Data.Configurations
         {
             itemStatus.Property(x => x.Status)
                 .IsRequired(true)
+                .HasMaxLength(25)
                 .IsUnicode(true);
         }
     }
