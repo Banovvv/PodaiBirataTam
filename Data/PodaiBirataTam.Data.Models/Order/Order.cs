@@ -11,7 +11,7 @@
 
         public int Id { get; set; }
         public DateTime CreatedOn { get; set; }
-        public string? Details { get; set; }
+        public string Details { get; set; }
 
         public int CustomerId { get; set; }
         public virtual Customer Customer { get; set; }
