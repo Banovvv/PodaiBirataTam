@@ -30,6 +30,8 @@ namespace PodaiBirataTam.Data
             new TownEntityTypeConfiguration().Configure(modelBuilder.Entity<Town>());
 
             // Beer-related configurations
+            new BeerEntityTypeConfiguration().Configure(modelBuilder.Entity<Beer>());
+            new BreweryEntityTypeConfiguration().Configure(modelBuilder.Entity<Brewery>());
             new BeerStyleEntityTypeConfiguration().Configure(modelBuilder.Entity<BeerStyle>());
             new BeerTypeEntityTypeConfiguration().Configure(modelBuilder.Entity<BeerType>());
             new SRMEntityTypeConfiguration().Configure(modelBuilder.Entity<SRM>());
