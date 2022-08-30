@@ -9,7 +9,7 @@
         public int Id { get; set; }
         public string TrackingNumber { get; set; }
         public DateTime ShippedOn { get; set; }
-        public DateTime DeliveredOn { get; set; }
+        public DateTime? DeliveredOn { get; set; }
         public string Details { get; set; }
 
         public int StatusId { get; set; }
