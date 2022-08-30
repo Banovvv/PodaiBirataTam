@@ -4,7 +4,7 @@
     {
         internal static string GetConnectionString()
         {
-            return @"Server=.\SQLEXPRESS;Database=HospitalDatabase;Integrated Security=true;";
+            return @"Server=.\SQLEXPRESS;Database=PodaiBirataTam;Integrated Security=true;";
         }
     }
 }
