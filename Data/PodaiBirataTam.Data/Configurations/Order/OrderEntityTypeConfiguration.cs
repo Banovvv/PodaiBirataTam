@@ -15,6 +15,14 @@ namespace PodaiBirataTam.Data.Configurations
             order.Property(x => x.Details)
                 .IsRequired(false)
                 .IsUnicode(true);
+
+            order.HasMany(x => x.Items)
+                .WithOne(x => x.Order)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            order.HasMany(x => x.Invoices)
+                .WithOne(x => x.Order)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

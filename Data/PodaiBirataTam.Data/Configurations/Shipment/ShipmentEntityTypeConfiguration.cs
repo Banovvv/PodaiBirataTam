@@ -21,7 +21,7 @@ namespace PodaiBirataTam.Data.Configurations
                 .IsRequired(true);
 
             shipment.Property(x => x.DeliveredOn)
-                .IsRequired(false);
+                .IsRequired(false);                
         }
     }
 }

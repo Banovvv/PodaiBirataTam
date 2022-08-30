@@ -4,7 +4,7 @@
     {
         public BeerType()
         {
-            BeerStyles = new HashSet<BeerStyle>():
+            BeerStyles = new HashSet<BeerStyle>();
         }
 
         public int Id { get; set; }

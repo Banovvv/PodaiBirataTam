@@ -4,6 +4,7 @@
     {
         public Shipment()
         {
+            Orders = new HashSet<OrderShipment>();
         }
 
         public int Id { get; set; }
@@ -15,10 +16,9 @@
         public int StatusId { get; set; }
         public virtual ShipmentStatus Status { get; set; }
 
-        public int OrderId { get; set; }
-        public virtual Order Order { get; set; }
-
         public int InvoiceId { get; set; }
         public virtual Invoice Invoice { get; set; }
+
+        public virtual ICollection<OrderShipment> Orders { get; set; }
     }
 }

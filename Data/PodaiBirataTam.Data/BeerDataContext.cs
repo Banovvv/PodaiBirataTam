@@ -36,8 +36,9 @@ namespace PodaiBirataTam.Data
 
         // Order-related DbSets
         public virtual DbSet<Order> Orders { get; set; }
-        public virtual DbSet<OrderStatus> OrderStatuses { get; set; }
         public virtual DbSet<OrderItem> OrderItems { get; set; }
+        public virtual DbSet<OrderStatus> OrderStatuses { get; set; }
+        public virtual DbSet<OrderShipment> OrderShipments { get; set; }
         public virtual DbSet<OrderItemStatus> OrderItemStatuses { get; set; }
 
         // Payment-related DbSets
@@ -80,7 +81,9 @@ namespace PodaiBirataTam.Data
 
             // Order-related configurations
             new OrderEntityTypeConfiguration().Configure(modelBuilder.Entity<Order>());
+            new OrderItemEntityTypeConfiguration().Configure(modelBuilder.Entity<OrderItem>());
             new OrderStatusEntityTypeConfiguration().Configure(modelBuilder.Entity<OrderStatus>());
+            new OrderShipmentEntityTypeConfiguration().Configure(modelBuilder.Entity<OrderShipment>());
             new OrderItemStatusEntityTypeConfiguration().Configure(modelBuilder.Entity<OrderItemStatus>());
 
             // Payment-related configurations

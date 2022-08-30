@@ -5,8 +5,8 @@
         public Order()
         {
             Invoices = new HashSet<Invoice>();
-            Shipments = new HashSet<Shipment>();
             Items = new HashSet<OrderItem>();
+            Shipments = new HashSet<OrderShipment>();
         }
 
         public int Id { get; set; }
@@ -20,7 +20,7 @@
         public virtual OrderStatus Status { get; set; }
 
         public virtual ICollection<Invoice> Invoices { get; }
-        public virtual ICollection<Shipment> Shipments { get; set; }
         public virtual ICollection<OrderItem> Items { get; set; }
+        public virtual ICollection<OrderShipment> Shipments { get; set; }
     }
 }

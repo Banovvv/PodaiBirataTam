@@ -19,6 +19,10 @@ namespace PodaiBirataTam.Data.Configurations
             invoice.Property(x => x.DueOn)
                 .HasDefaultValueSql("DATEADD(DAY, 14, GETDATE())")
                 .IsRequired(true);
+
+            invoice.HasOne(i => i.Order)
+                .WithMany(o => o.Invoices)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
