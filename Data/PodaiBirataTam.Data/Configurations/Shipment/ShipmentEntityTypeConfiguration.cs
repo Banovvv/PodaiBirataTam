@@ -8,6 +8,10 @@ namespace PodaiBirataTam.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Shipment> shipment)
         {
+            shipment
+                .HasIndex(x => x.TrackingNumber)
+                .IsUnique();
+
             shipment.Property(x => x.TrackingNumber)
                 .IsRequired(true)
                 .IsUnicode(false);
