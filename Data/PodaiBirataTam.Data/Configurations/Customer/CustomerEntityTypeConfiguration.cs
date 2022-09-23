@@ -8,6 +8,10 @@ namespace PodaiBirataTam.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Customer> customer)
         {
+            customer
+                .HasIndex(x => x.Username)
+                .IsUnique();
+
             customer.Property(x => x.FirstName)
                 .IsRequired(true)
                 .HasMaxLength(50)
