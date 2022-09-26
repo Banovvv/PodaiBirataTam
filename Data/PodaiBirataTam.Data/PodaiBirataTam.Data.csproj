@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PodaiBirataTam.Data.Common\PodaiBirataTam.Data.Common.csproj" />
     <ProjectReference Include="..\PodaiBirataTam.Data.Models\PodaiBirataTam.Data.Models.csproj" />
   </ItemGroup>
 
