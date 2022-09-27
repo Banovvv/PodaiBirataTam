@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\PodaiBirataTam.Data.Common\PodaiBirataTam.Data.Common.csproj" />
+    <ProjectReference Include="..\..\Data\PodaiBirataTam.Data\PodaiBirataTam.Data.csproj" />
+  </ItemGroup>
+
 </Project>
