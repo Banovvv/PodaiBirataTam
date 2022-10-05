@@ -1,4 +1,5 @@
-﻿using PodaiBirataTam.Data.Repositories;
+﻿using PodaiBirataTam.Data.Models;
+using PodaiBirataTam.Data.Repositories;
 
 namespace PodaiBirataTam.Services.Data
 {
@@ -11,9 +12,14 @@ namespace PodaiBirataTam.Services.Data
             this.repository = repository;
         }
 
-        public IEnumerable<Beer> GetAll<Beer>()
+        public IEnumerable<Beer> GetAll()
         {
-            return (IEnumerable<Beer>)this.repository.All().ToList();
+            return this.repository.All().ToList();
+        }
+
+        public async Task<IEnumerable<Beer>> GetByStyleAsync(string style)
+        {
+            return await this.repository.GetByStyleAsync(style);
         }
 
         public int GetCount()

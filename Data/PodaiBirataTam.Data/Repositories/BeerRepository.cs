@@ -10,7 +10,14 @@ namespace PodaiBirataTam.Data.Repositories
         {
         }
 
-        public async Task<Beer?> GetByUsernameAsync(string name)
+        public async Task<IEnumerable<Beer>> GetByStyleAsync(string style)
+        {
+            return await this.Context.Beers
+                .Where(x => x.Style.Name.ToLower() == style.ToLower())
+                .ToListAsync();
+        }
+
+        public async Task<Beer?> GetByNameAsync(string name)
         {
             return await this.Context.Beers
                 .FirstOrDefaultAsync(x => x.Name == name);

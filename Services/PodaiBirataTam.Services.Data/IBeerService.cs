@@ -5,6 +5,7 @@ namespace PodaiBirataTam.Services.Data
     public interface IBeerService
     {
         int GetCount();
-        IEnumerable<Beer> GetAll<Beer>();
+        IEnumerable<Beer> GetAll();
+        IEnumerable<Beer> GetByStyleAsync(string style);
     }
 }
