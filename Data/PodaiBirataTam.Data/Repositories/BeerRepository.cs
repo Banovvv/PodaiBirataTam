@@ -13,6 +13,7 @@ namespace PodaiBirataTam.Data.Repositories
         public async Task<IEnumerable<Beer>> GetByStyleAsync(string style)
         {
             return await this.Context.Beers
+                .Include(x => x.Style)
                 .Where(x => x.Style.Name.ToLower() == style.ToLower())
                 .ToListAsync();
         }
@@ -27,6 +28,14 @@ namespace PodaiBirataTam.Data.Repositories
         {
             return await this.Context.Beers
                 .Where(x => x.Price <= price)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<Beer>> GetByBreweryAsync(string breweryName)
+        {
+            return await this.Context.Beers
+                .Include(x => x.Brewery)
+                .Where(x => x.Brewery.Name == breweryName)
                 .ToListAsync();
         }
     }

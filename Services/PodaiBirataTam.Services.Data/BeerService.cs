@@ -22,6 +22,11 @@ namespace PodaiBirataTam.Services.Data
             return await this.repository.GetBelowPriceAsync(price);
         }
 
+        public async Task<IEnumerable<Beer>> GetByBreweryAsync(string breweryName)
+        {
+            return await this.repository.GetByBreweryAsync(breweryName);
+        }
+
         public async Task<IEnumerable<Beer>> GetByStyleAsync(string style)
         {
             return await this.repository.GetByStyleAsync(style);
