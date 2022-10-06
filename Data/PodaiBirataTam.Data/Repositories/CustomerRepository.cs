@@ -1,4 +1,5 @@
-﻿using PodaiBirataTam.Data.Common.Repositories;
+﻿using Microsoft.EntityFrameworkCore;
+using PodaiBirataTam.Data.Common.Repositories;
 using PodaiBirataTam.Data.Models;
 
 namespace PodaiBirataTam.Data.Repositories
@@ -10,14 +11,16 @@ namespace PodaiBirataTam.Data.Repositories
 
         }
 
-        public Task<Customer?> GetByEmailAsync(string email)
+        public async Task<Customer?> GetByEmailAsync(string email)
         {
-            throw new NotImplementedException();
+            return await this.Context.Customers
+                .FirstOrDefaultAsync(x => x.Email == email);
         }
 
-        public Task<Customer?> GetByUsernameAsync(string username)
+        public async Task<Customer?> GetByUsernameAsync(string username)
         {
-            throw new NotImplementedException();
+            return await this.Context.Customers
+                .FirstOrDefaultAsync(x => x.Username == username);
         }
     }
 }
