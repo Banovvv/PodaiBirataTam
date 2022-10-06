@@ -1,6 +1,6 @@
 ﻿using PodaiBirataTam.Data.Models;
 
-namespace PodaiBirataTam.Services.Data
+namespace PodaiBirataTam.Services.Data.Contracts
 {
     public interface ICustomerService
     {

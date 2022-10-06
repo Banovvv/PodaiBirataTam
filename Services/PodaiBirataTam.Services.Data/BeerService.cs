@@ -1,5 +1,6 @@
 ﻿using PodaiBirataTam.Data.Models;
 using PodaiBirataTam.Data.Repositories;
+using PodaiBirataTam.Services.Data.Contracts;
 
 namespace PodaiBirataTam.Services.Data
 {
