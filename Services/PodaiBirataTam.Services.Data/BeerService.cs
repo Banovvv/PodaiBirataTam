@@ -36,5 +36,10 @@ namespace PodaiBirataTam.Services.Data
         {
             return this.repository.AllAsNoTracking().Count();
         }
+
+        public async Task<IEnumerable<Beer>> GetInStock()
+        {
+            return await this.repository.GetInStock();
+        }
     }
 }

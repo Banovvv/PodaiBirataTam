@@ -38,5 +38,12 @@ namespace PodaiBirataTam.Data.Repositories
                 .Where(x => x.Brewery.Name == breweryName)
                 .ToListAsync();
         }
+
+        public async Task<IEnumerable<Beer>> GetInStock()
+        {
+            return await this.Context.Beers
+                .Where(x => x.Quantity > 0)
+                .ToListAsync();
+        }
     }
 }

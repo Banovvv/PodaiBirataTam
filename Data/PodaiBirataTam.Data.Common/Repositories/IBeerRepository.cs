@@ -8,5 +8,6 @@ namespace PodaiBirataTam.Data.Common.Repositories
         Task<IEnumerable<Beer>> GetByStyleAsync(string style);
         Task<IEnumerable<Beer>> GetBelowPriceAsync(decimal price);
         Task<IEnumerable<Beer>> GetByBreweryAsync(string breweryName);
+        Task<IEnumerable<Beer>> GetInStock();
     }
 }
