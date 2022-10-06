@@ -22,5 +22,12 @@ namespace PodaiBirataTam.Data.Repositories
             return await this.Context.Beers
                 .FirstOrDefaultAsync(x => x.Name == name);
         }
+
+        public async Task<IEnumerable<Beer>> GetBelowPriceAsync(decimal price)
+        {
+            return await this.Context.Beers
+                .Where(x => x.Price <= price)
+                .ToListAsync();
+        }
     }
 }

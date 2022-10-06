@@ -6,6 +6,7 @@ namespace PodaiBirataTam.Services.Data
     {
         int GetCount();
         IEnumerable<Beer> GetAll();
-        IEnumerable<Beer> GetByStyleAsync(string style);
+        Task<IEnumerable<Beer>> GetByStyleAsync(string style);
+        Task<IEnumerable<Beer>> GetBelowPriceAsync(decimal price);
     }
 }
