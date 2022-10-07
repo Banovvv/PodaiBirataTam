@@ -1,21 +1,16 @@
-﻿using PodaiBirataTam.Data.Models;
-using PodaiBirataTam.Data.Repositories;
+﻿using PodaiBirataTam.Data.Common.Repositories;
+using PodaiBirataTam.Data.Models;
 using PodaiBirataTam.Services.Data.Contracts;
 
 namespace PodaiBirataTam.Services.Data
 {
     public class BeerService : IBeerService
     {
-        private readonly BeerRepository repository;
+        private readonly IBeerRepository repository;
 
-        public BeerService(BeerRepository repository)
+        public BeerService(IBeerRepository repository)
         {
             this.repository = repository;
-        }
-
-        public IEnumerable<Beer> GetAll()
-        {
-            return this.repository.All().ToList();
         }
 
         public async Task<IEnumerable<Beer>> GetBelowPriceAsync(decimal price)
@@ -35,12 +30,17 @@ namespace PodaiBirataTam.Services.Data
 
         public int GetCount()
         {
-            return this.repository.AllAsNoTracking().Count();
+            return this.repository.GetCount();
         }
 
         public async Task<IEnumerable<Beer>> GetInStock()
         {
             return await this.repository.GetInStock();
+        }
+
+        public async Task<IEnumerable<Beer>> GetAll()
+        {
+            return await this.repository.GetAll();
         }
     }
 }

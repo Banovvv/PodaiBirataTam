@@ -1,14 +1,14 @@
-﻿using PodaiBirataTam.Data.Models;
-using PodaiBirataTam.Data.Repositories;
+﻿using PodaiBirataTam.Data.Common.Repositories;
+using PodaiBirataTam.Data.Models;
 using PodaiBirataTam.Services.Data.Contracts;
 
 namespace PodaiBirataTam.Services.Data
 {
     public class ShipmentService : IShipmentService
     {
-        private readonly ShipmentRepository repository;
+        private readonly IShipmentRepository repository;
 
-        public ShipmentService(ShipmentRepository repository)
+        public ShipmentService(IShipmentRepository repository)
         {
             this.repository = repository;
         }

@@ -45,5 +45,16 @@ namespace PodaiBirataTam.Data.Repositories
                 .Where(x => x.Quantity > 0)
                 .ToListAsync();
         }
+
+        public int GetCount()
+        {
+            return this.AllAsNoTracking().Count();
+        }
+
+        public async Task<IEnumerable<Beer>> GetAll()
+        {
+            return await this.Context.Beers
+                .ToListAsync();
+        }
     }
 }
