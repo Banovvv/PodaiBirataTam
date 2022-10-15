@@ -33,14 +33,14 @@ namespace PodaiBirataTam.Services.Data
             return this.repository.GetCount();
         }
 
-        public async Task<IEnumerable<Beer>> GetInStock()
+        public async Task<IEnumerable<Beer>> GetInStockAsync()
         {
-            return await this.repository.GetInStock();
+            return await this.repository.GetInStockAsync();
         }
 
-        public async Task<IEnumerable<Beer>> GetAll()
+        public async Task<IEnumerable<Beer>> GetAllAsync()
         {
-            return await this.repository.GetAll();
+            return await this.repository.GetAllAsync();
         }
     }
 }

@@ -39,7 +39,7 @@ namespace PodaiBirataTam.Data.Repositories
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<Beer>> GetInStock()
+        public async Task<IEnumerable<Beer>> GetInStockAsync()
         {
             return await this.Context.Beers
                 .Where(x => x.Quantity > 0)
@@ -51,7 +51,7 @@ namespace PodaiBirataTam.Data.Repositories
             return this.AllAsNoTracking().Count();
         }
 
-        public async Task<IEnumerable<Beer>> GetAll()
+        public async Task<IEnumerable<Beer>> GetAllAsync()
         {
             return await this.Context.Beers
                 .ToListAsync();
