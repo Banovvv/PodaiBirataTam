@@ -12,13 +12,13 @@ namespace PodaiBirataTam.Data.Repositories
 
         public async Task<Shipment?> GetByTrackingNumberAsync(string trackingNumber)
         {
-            return await this.Context.Shipments
+            return await this.DbSet
                 .FirstOrDefaultAsync(x => x.TrackingNumber == trackingNumber);
         }
 
         public async Task<IEnumerable<Shipment>> GetByStatusAsync(string status)
         {
-            return await this.Context.Shipments
+            return await this.DbSet
                 .Include(x => x.Status)
                 .Where(x => x.Status.Status == status)
                 .ToListAsync();
