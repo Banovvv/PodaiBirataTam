@@ -12,7 +12,7 @@ namespace PodaiBirataTam.Data.Repositories
 
         public async Task<IEnumerable<Order>> GetByStatusAsync(string status)
         {
-            return await this.Context.Orders
+            return await this.DbSet
                 .Include(x => x.Status)
                 .Where(x => x.Status.Status == status)
                 .ToListAsync();
@@ -20,7 +20,7 @@ namespace PodaiBirataTam.Data.Repositories
 
         public async Task<IEnumerable<Order>> GetByCustomerAsync(string username)
         {
-            return await this.Context.Orders
+            return await this.DbSet
                 .Include(x => x.Customer)
                 .Where(x => x.Customer.Username == username)
                 .ToListAsync();
