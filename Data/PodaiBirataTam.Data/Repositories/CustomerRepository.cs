@@ -13,13 +13,13 @@ namespace PodaiBirataTam.Data.Repositories
 
         public async Task<Customer?> GetByEmailAsync(string email)
         {
-            return await this.Context.Customers
+            return await this.DbSet
                 .FirstOrDefaultAsync(x => x.Email == email);
         }
 
         public async Task<Customer?> GetByUsernameAsync(string username)
         {
-            return await this.Context.Customers
+            return await this.DbSet
                 .FirstOrDefaultAsync(x => x.Username == username);
         }
     }
